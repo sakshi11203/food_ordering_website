@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 // import { ListofRestaurent } from "../utils/constants"
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Networkconnection from "../utils/Networkconnection";
+import Hero from "./Hero";
+
 
 const Body = () => {
   const [LORe, setLORe] = useState([]);
@@ -32,26 +34,21 @@ const Body = () => {
     // swiggy api fetch
 
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
-    // console.log(Data)
+    console.log(json);
 
 
 
 //  data  come from api  new swiggy api 
 
-    setLORe(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setLORe(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
-    setfilteredR(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setfilteredR(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
   };
 
-    
-   
-            
-   
-    
-
+  
   const OnlineStatus = useOnlineStatus(true);
 
   if (!OnlineStatus) {
@@ -59,9 +56,8 @@ const Body = () => {
   }
 
 
-  if (LORe.length == 0) {
-
-    return <Simmeruicards />
+  if (LORe?.length == 0) {
+ return <Simmeruicards />
   }
 
 
@@ -69,6 +65,7 @@ const Body = () => {
 
   return (
     <>
+    <Hero/>
       <div className="  shadow-2xl mb-10  m-auto rounded-2xl">
 
         <br></br>
@@ -158,7 +155,7 @@ const Body = () => {
 
         <div className="flex flex-wrap m-2 justify-center " data-testid="reslist">
           {searchResult ? (
-            filteredR.map((res) => {
+            filteredR?.map((res) => {
               return (
                 <Link to={"/restaurants/" + res?.info.id} key={res?.info.id}>
                   <ResCard resData={res?.info} />
@@ -169,10 +166,11 @@ const Body = () => {
 
             
             <div className="w-full flex justify-center">
-              <img
+              <p className="text-5xl">Sorry search not found</p>
+              {/* <img
                 className="w-[70%] mt-32 mb-28 "   
-                src="https://getfood.co.uk/themes-nct/images-nct/no-result-found-white.jpeg"
-              />
+                src='https://image.similarpng'
+              /> */}
               {/* this is the function for  no search  found */}
             </div>
           )}
