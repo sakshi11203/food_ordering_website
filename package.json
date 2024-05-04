@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "this is a namaste react course",
   "scripts": {
-    "start": "rm -rf .parcel-cache && parcel",
+    "start": "rm -rf .parcel-cache && parcel && start",
     "build": "rm -rf .parcel-cache && parcel build",
     "test": "jest"
   },
