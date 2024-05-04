@@ -1,4 +1,4 @@
-🔴Namaste React 🚀🔴
+🔴#Namaste React 🚀🔴
 Parcel
 Dev Build
 Local Server
@@ -40,7 +40,7 @@ Contact */
 
 
 
-🔴Two types of Export/Import🔴
+# 🔴Two types of Export/Import🔴
 
 Default Export/Import
 export default Component; import Component from "path";
@@ -50,7 +50,7 @@ export const Component; import {Component} from "path";
 
 
 
-🔴React Hooks🔴
+# 🔴React Hooks🔴
 
 (Normal JS utility functions)
 useState() - Superpowerful State Variables in react
@@ -58,7 +58,7 @@ useEffect()
 
 
 
-🔴2 types Routing in web apps🔴
+# 🔴2 types Routing in web apps🔴
 
 Client Side Routing
 Server Side Routing
@@ -73,18 +73,21 @@ Connect our store to our app
 Slice (cartSlice)
 dispatch(action)
 Selector
-Types of testing (devloper)
-Unit Testing
-Integration Testing
-End to End Testing - e2e testing
+
+
+# Types of testing (devloper)
+
+Unit Testing--testing react component in isolation (like to test only header component)
+Integration Testing--(testing of features like searching , in that multiple components are involved)
+End to End Testing - e2e testing--(user start till end)
 
 
 🔴Setting up Testing in our app🔴
 Install React Testing Library
 Installed jest
 Installed Babel dependencies
-Configure Babel
-Configure Parcel Config file to disable default babel transpilation
+Configure Babel  
+Configure Parcel Config file to disable default babel transpilation  (parcel ka jo khud ka babel hai vo nhi use krenge khud s jo add kiye vo use krskte)
 Jest - npx jest --init
 Install jsdom library
 Install @babel/preset-react - to make JSX work in test cases
