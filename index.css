@@ -18,3 +18,9 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+
+.customheightcards{
+height : 93%;
+min-height : 93%;
+
+}
