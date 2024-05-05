@@ -3,6 +3,10 @@ import { CDN_URL } from '../utils/constants'
 import { addItems } from '../utils/cartSlice'
 import { useDispatch } from 'react-redux'
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const ItemCard = ({fooditem}) => {
 
   const MenuItemsCards = fooditem;
@@ -18,14 +22,19 @@ const ItemCard = ({fooditem}) => {
 
   const handleAddItem = (fooditem) => {
 
+
     dispatch (addItems (fooditem) );
+
 
 
   };
 
+
 // restaurent menu items cart with img
+const notify = () => toast("Wow so easy!");
 
   return (
+
 
     <div>
       <hr className="   bg-gray-200 h-0.5 m-auto mt-5 mb-5 "></hr>
@@ -44,15 +53,27 @@ const ItemCard = ({fooditem}) => {
         <div className='flex flex-col gap-1'>
           <img className="w-40  border-2 rounded-lg" src={CDN_URL + imageId} alt="food-img" />
           <div className=" hover:visible absolute">
-          <button className=' border-solid bg-black active:animate-bounce text-white p-2 px-4 rounded-lg mt-1 shadow-lg  '
-
-            onClick={() => handleAddItem( fooditem )}
+          <button className="border-solid bg-black  text-white p-2 px-4 rounded-lg mt-1 shadow-lg"
+            onClick={() => {
+               handleAddItem( fooditem )
+               toast("Item added to cart 🥳🥳🥳")
+              //  {notify}
+            }}
 
           > Add+</button>
+            <ToastContainer />
+
           </div>
+          <div>
+        {/* <button className="border-solid bg-black  text-white p-2 px-4 rounded-lg mt-1 shadow-lg" onClick={notify, handleAddItem}>Notify!</button>
+        <ToastContainer /> */}
+      </div>
+
         </div>
 
+
       </div>
+
     </div>
   )
 }

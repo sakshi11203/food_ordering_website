@@ -42,9 +42,9 @@ const Body = () => {
 
 //  data  come from api  new swiggy api 
 
-    setLORe(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setLORe(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
-    setfilteredR(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setfilteredR(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
   };
 
@@ -65,7 +65,7 @@ const Body = () => {
 
   return (
     <>
-    <Hero/>
+    {/* <Hero/> */}
       <div className="  shadow-2xl mb-10  m-auto rounded-2xl">
 
         <br></br>
