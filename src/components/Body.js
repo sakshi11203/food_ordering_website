@@ -165,8 +165,8 @@ const Body = () => {
           ) : (
 
             
-            <div className="w-full flex justify-center">
-              <p className="text-5xl">Sorry search not found</p>
+            <div className="h-screen pt-52 flex justify-center">
+              <p className="text-7xl font-semibold ">Sorry search not found 🥺🥺🥺</p>
               {/* <img
                 className="w-[70%] mt-32 mb-28 "   
                 src='https://image.similarpng'

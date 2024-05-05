@@ -3,6 +3,7 @@ import {useState} from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
+
 const Header=()=>{
     const [btnn,setbtnn] = useState("login");
     const onlineStatus =useOnlineStatus();
@@ -10,7 +11,7 @@ const Header=()=>{
 //subscribing to store
     const cartItems =useSelector((store)=>store.cart.items);
     return(
-        <div className="flex justify-between bg-pink-50 shadow-lg m-2"> 
+        <div className="flex justify-between   bg-pink-50 shadow-lg m-2"> 
             <div className="logo-container"> 
             <img className="w-28 h-full" src={LOGO_URL} alt="" />
             </div>
@@ -25,7 +26,7 @@ const Header=()=>{
                     }</li>
                     <li className="px-4"> <Link to="/" > Home</Link></li>
                     <li className="px-4">
-                       <Link to="/about" > About Us</Link>
+                       <Link to="/about poppins-thin" > About Us</Link>
                        </li>
                     <li className="px-4">
                         <Link to="/cart">Cart(({cartItems.length}) items)

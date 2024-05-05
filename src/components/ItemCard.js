@@ -31,7 +31,6 @@ const ItemCard = ({fooditem}) => {
 
 
 // restaurent menu items cart with img
-const notify = () => toast("Wow so easy!");
 
   return (
 
