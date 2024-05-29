@@ -4,7 +4,7 @@
   "description": "this is a namaste react course",
   "scripts": {
     "start": "rm -rf .parcel-cache && parcel && start",
-    "build": "rm -rf .parcel-cache && parcel build",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

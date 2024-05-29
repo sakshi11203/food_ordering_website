@@ -1,90 +1,4 @@
-// // import {useEffect,useState} from "react";
-// import Shimmer from "./shimmer";
-// import { useParams } from "react-router-dom";
-// // import {MENU_URL } from "../utils/constants"
-// import { useState } from 'react';
-// import userResMenu from "../utils/userResMenu";
-// import Menu from "./Menu";
 
-
-
-// import ResCate from "./ResCate";
-// // import TemList from "./TemList";
-// // const [isActive, setIsActive] = useState(false);  //added
-
-// // const [showItems,setshowItems]= useState(false);
-// const RestaurantMenu=()=>{
-//     // const [show,setshow]= useState(false);
-//     const{resId} =useParams();
-
-
-//     const resInfo= userResMenu(resId); // custom hook 
-//     const [showIndex,setShowIndex] =useState(null);
-
-// if (resInfo===null) return <Shimmer/>;
-// const {name,cuisines,costForTwoMessage,avgRatingString,city,costForTwo} =resInfo?.cards[2].card.card.info;
-
-// const {itemCards} = (resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card );
-// // const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card;
- 
-// // console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-  
-// const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-// // console.log(categories); 
-
-
-
-//     return (
-//         <div className="text-center">
-//             <h1 className ="font-bold my-5 text-2xl">{name}</h1>
-//             <p className="font-bold text-lg">
-//                 {cuisines.join(",")}-{costForTwoMessage}
-//             </p>
-         
-
-
-// {/* {categories.map((cate)=>{
-//         return (
-//             <div key={cate?.card?.card?.id} > 
-//               <div className="w-6/12 mx-auto my-4 bg-gray-100 shadow-xl p-4">
-//                 <div className ="flex justify-between cursor-pointer" > 
-//              <span className="font-bold text-lg"> {cate?.card?.card?.title} ({cate?.card?.card?.itemCards.length }) </span>
-//              <span>⬇️</span>
-//              </div>
-// {showItems && <TemList  items={cate?.card?.card?.itemCards}/>}
-//             </div>
-//             </div> 
-//         )
-       
-// })} */}
-
-// {categories.map((category,index)=>(<ResCate key={category?.card.card.title} data={category?.card?.card}
-
-// showItems={ index===showIndex}
-
-// setShowIndex={()=>setShowIndex(index===showIndex?null:index)}
-
-// />))}
-
-
-
- 
-//             </div>
-//     );
-// };
-
-// export default RestaurantMenu;
-
-// import Shimmer from "./shimmer";
-// import { useParams } from "react-router-dom";
-// // import {MENU_URL } from "../utils/constants"
-// import { useState } from 'react';
-// import userResMenu from "../utils/userResMenu";
-// import Menu from "./Menu";
-
-
-
-// import ResCate from "./ResCate";
 
 import React from "react";
 import Simmermenucards from "./Simmermenucards";
@@ -106,7 +20,7 @@ const RestaurantMenu = () => {
     const categories =
     resinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
-        c.card?.["card"]?.["@type"] ===
+        c.card?.["card``"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 

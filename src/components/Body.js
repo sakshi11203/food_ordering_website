@@ -65,7 +65,7 @@ const Body = () => {
 
   return (
     <>
-    {/* <Hero/> */}
+    <Hero/>
       <div className="  shadow-2xl mb-10  m-auto rounded-2xl">
 
         <br></br>
